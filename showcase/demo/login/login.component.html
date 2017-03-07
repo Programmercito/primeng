@@ -1,0 +1,52 @@
+<div class="ui-g">
+
+    <div class="ui-xl-6  ui-sm-6 ui-md-6 ui-lg-6  ui-g-6 text-center center-block" align="center">
+        <br/><br/>
+        <!--Escudo Nacional-->
+        <!--             srcset="common/img/escudo.gif 1024w, common/img/escudo.gif 640w, common/img/escudo.gif 320w"
+             sizes="(min-width: 28em) 33.3vw, 100vw" -->
+        <img src="common/img/escudo.gif"
+             align="middle"
+             style="height: auto;"
+             alt="Escudo de Bolivia">
+
+    </div>
+
+    <div class="ui-xl-6  ui-sm-6 ui-md-6 ui-lg-6  ui-g-6 text-center">
+        <!--Formulario de Ingreso--> 
+<br/><br/>
+        <h2 class="form-signin-heading">Ingreso al Sistema de Compras v2.0</h2>
+        <br />
+        <!--<alert></alert>-->
+        <form name="loginForm"   
+              #f="ngForm" novalidate>
+
+
+
+            <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !usuario.valid }">
+
+                 <input type="text" class="form-control" pInputText  size="30" name="usuario" [(ngModel)]="usrmodel.usuario" #usuario="ngModel"  placeholder="Usuario"  required />
+                <div *ngIf="f.submitted && !usuario.valid" class="help-block">Se requiere nombre de usuario</div>
+            </div>
+            <br />
+            <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !clave.valid }">
+                 <input  type="password"    size="30" pInputText  class="form-control" name="clave" [(ngModel)]="usrmodel.clave" #clave="ngModel" placeholder="Contraseña" required />
+                <br/>
+                <div *ngIf="f.submitted && !clave.valid" class="help-block">Se requiere Contraseña</div>
+            </div>
+            <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+
+
+
+
+            <br />
+            <button pButton class="btn btn-lg btn-primary btn-block"  (click)="login()" label="Ingresar al sistema"></button>
+            <button pButton class="btn btn-lg btn-primary btn-block"  (click)="limpiar()" label="Limpiar"></button>
+
+
+            <br />
+           
+        </form>
+    </div>
+
+</div>

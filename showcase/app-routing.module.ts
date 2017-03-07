@@ -516,6 +516,13 @@ import { HomePageComponent } from './homepage.component';
             resolve(require('./demo/solicitudes/validationdemo.module')['ValidationDemoModule']);
           });
         })
+      },
+      {
+        path: 'login', loadChildren: () => new Promise(function (resolve) {
+          (require as any).ensure([], function (require: any) {
+            resolve(require('./demo/login/login.component.module')['LoginComponentModule']);
+          });
+        })
       }
     ])
   ],
