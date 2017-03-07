@@ -8,7 +8,7 @@ export class SolicitudesService {
     constructor(private http: Http) { }
 
     getSolicitudes() {
-        return this.http.get('src/app/resources/data/cars-medium.json')
+        return this.http.get('showcase/resources/js/medium.json')
             .toPromise()
             .then(res => <SolicitudesInterface[]>res.json().data)
             .then(data => { return data; });
