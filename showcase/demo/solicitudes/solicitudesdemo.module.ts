@@ -1,18 +1,18 @@
 import {NgModule}     from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FormsModule,ReactiveFormsModule}    from '@angular/forms';
-import {ValidationDemo} from './validationdemo';
-import {ValidationDemoRoutingModule} from './validationdemo-routing.module';
+import {SolicitudesDemo} from './solicitudesdemo';
+import {SolicitudesDemoRoutingModule} from './solicitudesdemo-routing.module';
 
 @NgModule({
 	imports: [
 		CommonModule,
         FormsModule,
         ReactiveFormsModule,
-		ValidationDemoRoutingModule
+		SolicitudesDemoRoutingModule
 	],
 	declarations: [
-		ValidationDemo
+		SolicitudesDemo
 	]
 })
-export class ValidationDemoModule {}
+export class SolicitudesDemoModule {}
