@@ -1,5 +1,5 @@
 import { SolicitudesInterface } from './Solicitudes.interface';
-class SolicitudesClase implements SolicitudesInterface {
+export class SolicitudesClase implements SolicitudesInterface {
     constructor(public id_solicitud?,
     public id_catalogo?,
     public gestion?,
