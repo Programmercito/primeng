@@ -2,7 +2,7 @@
     <div id="layout-sidebar" [ngClass]="{'active':mobileMenuActive}">
         <span class="layout-logo">
             <a href="#" class="sidebar-logo" [routerLink]="['/']">
-                <img alt="logo" src="showcase/resources/images/primeng-sidebar.svg" />
+                <img alt="logo" src="https://www.sicoes.gob.bo/img/portal/logo.png" />
             </a>
             <a href="#" id="menu-button-mobile" (click)="toggleMenu($event)" [ngClass]="{'active':mobileMenuActive}">
                 <img alt="logo" src="showcase/resources/images/menuicon.svg"/>
@@ -10,11 +10,11 @@
         </span>
 
 
-        <a id="menu_sigep" #inputmenutitle [class.active-menuitem]="inputmenutitle.id == activeMenuId" (click)="activeMenuId = inputmenutitle.id">
+        <a id="menu_sigep" #sigepmenutitle [class.active-menuitem]="sigepmenutitle.id == activeMenuId" (click)="activeMenuId = sigepmenutitle.id">
             <img src="showcase/resources/images/mono/input.svg" />
             <span>Sigep</span>
         </a>
-        <div [ngClass]="{submenushow: (inputmenutitle.id == activeMenuId), 'submenuhide': (inputmenutitle.id != activeMenuId)}">
+        <div [ngClass]="{submenushow: (sigepmenutitle.id == activeMenuId), 'submenuhide': (sigepmenutitle.id != activeMenuId)}">
             <a [routerLink]="['/login']" (click)="mobileMenuActive = false">&#9679; Login</a>
             <a [routerLink]="['/solicitudes']" (click)="mobileMenuActive = false">&#9679; Solicitudes</a>
         </div>
@@ -192,7 +192,7 @@
             </a>
 
             <a href="http://forum.primefaces.org/viewforum.php?f=35" class="topbar-link">
-                <img alt="mockosx" src="showcase/resources/images/community.svg" />
+                <img alt="mockosx" src="showcase/resources/images/community.svg" width="40" height="40" />
                 <span>Forum</span>
             </a>
 
@@ -239,7 +239,7 @@
         </div>
 
         <div class="content-section footer clearfix">
-            <span><a href="http://www.primetek.com.tr">PrimeTek</a>, Copyright &copy; 2016</span>
+            <span><a href="http://www.primetek.com.tr">Sigep</a>, Copyright &copy; 2017</span>
             <span>All rights reserved</span>
         </div>
     </div>
