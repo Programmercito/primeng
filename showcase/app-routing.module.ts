@@ -513,7 +513,7 @@ import { HomePageComponent } from './homepage.component';
       {
         path: 'solicitudes', loadChildren: () => new Promise(function (resolve) {
           (require as any).ensure([], function (require: any) {
-            resolve(require('./demo/solicitudes/validationdemo.module')['ValidationDemoModule']);
+            resolve(require('./demo/solicitudes/solicitudesdemo.module')['SolicitudesDemoModule']);
           });
         })
       },

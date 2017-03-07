@@ -1,0 +1,19 @@
+export interface SolicitudesInterface{
+    id_solicitud?;
+    id_catalogo?;
+    gestion?;
+    id_entidad?;
+    id_da?;
+    id_ue?;
+    nro_documento?;
+    tipo_formulario?;
+    tipo_operacion?;
+    fecha_elaboracion?;
+    fecha_verificacion?;
+    usuario_verificacion?;
+    fecha_aprobacion?;
+    usuario_aprobacion?;
+    version_entidad?;
+    version_da?;
+    version_ue?;
+}
