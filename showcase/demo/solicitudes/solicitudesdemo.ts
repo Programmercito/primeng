@@ -3,9 +3,9 @@ import {Validators,FormControl,FormGroup,FormBuilder} from '@angular/forms';
 
 
 @Component({
-    templateUrl: 'showcase/demo/solicitudes/validationdemo.html'
+    templateUrl: 'showcase/demo/solicitudes/solicitudesdemo.html'
 })
-export class ValidationDemo implements OnInit {
+export class SolicitudesDemo implements OnInit {
 
     constructor(private fb: FormBuilder) {}
     
