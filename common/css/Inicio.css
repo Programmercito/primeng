@@ -1,0 +1,130 @@
+.navbar-collapse::after{ display: none; }
+.portada.glyphicon-pencil { color: white; }
+.fondoFila { background: #f3f3f3; }
+.margin-opciones-inicio{ margin: 10px 0 20px; }
+.navbar-azul{
+    background: #337AB7;
+    margin-bottom: 0 !important;
+}
+.nav-link-azul>li>a{
+    color : white !important;
+    text-shadow: none !important;
+}
+.nav-link-azul>li>a:hover{ background: #286090 !important; }
+#menuIndex .breadcrumb a {
+    cursor: pointer;
+    margin-right: 7px;
+}
+#menuIndex .breadcrumb a span { margin-right: 5px; }
+@media (max-width: 767px) {
+    .inicio-titulo { font-size: 21px; }
+    .icon-padding-inicio{ padding: 18px; }
+    .portada .glyphicon { font-size: 45px; }
+    .font-size-opcionesinicio{ font-size: 18px !important; }
+    .paddingLeftTitle{ padding-left: 15px; }
+    #menuDrawer .panel-content{ height: 215px; }
+    #menuIndex a.breadcrumb{
+        margin-bottom: 10px;
+        width: 100% 
+    }
+    #menuIndex .breadcrumb a{ font-size: 12px; }
+    #menuIndex .breadcrumb img{ width: 17px; }
+    #menuIndex .page-header .btnMenu:first-of-type{ padding-left: 0; }
+    #menuIndex .page-header .btnMenu:last-of-type{ padding-right: 0; }
+    #menuIndex .list-menu button img{ height: 25px; }
+    #menuIndex .list-menu button div{ 
+        margin-left: 35px;
+        font-size: 12px;
+    }
+    #menuIndex .list-group .menuLink img, #menuIndex .list-group .menuLink span.glyphicon {
+        font-size: 45px;
+        height: 50px;
+        margin-bottom: 5px;
+    }
+    #menuIndex .list-group .menuLink span.glyphicon-class{
+        font-size: 12px;
+        height: 35px;
+        line-height: 14px;
+    }
+    #menuIndex .list-group .menuLink{ height: 105px; }
+    .paddingLeft, .paddingRight{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    h2 small { font-size: 55%; }
+}
+@media ( min-width : 768px) {
+    .inicio-titulo { font-size: 24px; }
+    .icon-padding-inicio{ padding: 20px 23px; }
+    .portada .glyphicon { font-size: 50px; }
+    .font-size-opcionesinicio{ font-size: 19px !important; }
+    .tablaDetallesLeft{ padding-left: 7px; }
+    .tablaDetallesRight{ padding-right: 7px; }
+    .navbar-azul{ height: 53px; }
+    /*#menuIndex.container { max-width: 730px; }*/
+    #menuDrawer .panel-content{ height: 400px; }
+    #menuIndex .page-header .btnMenu{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    #menuIndex .breadcrumb { font-size: 13px; }
+    #menuIndex .breadcrumb li { line-height: 23px; }
+    #menuIndex .breadcrumb img{ width: 20px; }
+    #menuIndex .btn.breadcrumb { 
+        padding-bottom: 8.5px;
+        font-size: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    #menuIndex .list-menu button img{ height: 40px; }
+    #menuIndex .list-menu button .glyphicon{ font-size: 40px; }
+    #menuIndex .list-menu button div{
+        line-height: 40px;
+        margin-left: 60px;
+    }
+    #menuIndex .list-group .menuLink{ height: 165px; }
+    #menuIndex .list-group .menuLink span.glyphicon-class{
+        font-size: 16px;
+        height: 45px;
+        line-height: 21px;
+    }
+    #menuIndex .list-group .menuLink img, #menuIndex .list-group .menuLink span.glyphicon {
+        font-size: 73px;
+        height: 80px;
+        margin-bottom: 10px;
+    }
+    .paddingLeft{ padding-left: 0; }
+    .paddingRight{ padding-right: 0; }
+}
+
+@media ( min-width : 992px) {
+    .inicio-titulo { font-size: 24px; }
+    .icon-padding-inicio{ padding: 25px 28px; }
+    .portada .glyphicon { font-size: 60px; }
+    .font-size-opcionesinicio{ font-size: 20px !important; }
+    #menuIndex .tabMenu {
+        width: 230px;
+        padding: 30px 25px;
+        position: fixed;
+    }
+}
+
+@media ( min-width : 1200px) {
+    .inicio-titulo { font-size: 24px; }
+    .icon-padding-inicio{
+        padding-left: 35px;
+        padding-right: 35px;
+        padding-top: 18px;
+        padding-bottom: 25px;
+    }
+    .portada .glyphicon { font-size: 60px; }
+    .font-size-opcionesinicio{ font-size: 20px !important; }
+    #menuIndex .tabMenu { width: 280px; }
+}
+
+@media( min-width:1600px){
+    .inicio-titulo { font-size: 24px; }
+    .icon-padding-inicio{ padding: 28px 34px; }
+    .portada .glyphicon { font-size: 50px; }
+    .font-size-opcionesinicio{ font-size: 20px !important; }
+}
