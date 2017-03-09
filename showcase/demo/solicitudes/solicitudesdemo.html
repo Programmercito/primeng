@@ -8,11 +8,81 @@
 <div class="content-section implementation">
     <p-dataTable [value]="sols" selectionMode="single" [(selection)]="selectedSol" (onRowSelect)="onRowSelect($event)" [paginator]="true"
         [rows]="10" [responsive]="true">
-        <p-header>CRUD for Cars</p-header>
-        <p-column field="id_solicitud" header="Id solicitud" [sortable]="true"></p-column>
+        <p-header>Solicitudes</p-header>
+        <p-column field="gestion" header="Gestion" [sortable]="true"></p-column>
+        <p-column field="id_entidad" header="Entidad" [sortable]="true"></p-column>
+        <p-column field="id_da" header="Da" [sortable]="true"></p-column>
+        <p-column field="id_ue" header="Ue" [sortable]="true"></p-column>
+        <p-column field="nro_documento" header="NroDocumento" [sortable]="true"></p-column>
+        <p-column field="tipo_formulario" header="Formulario" [sortable]="true"></p-column>
+        <p-column field="tipo_operacion" header="Operacion" [sortable]="true"></p-column>
+        <p-column field="fecha_elaboracion" header="Fecha Elaboración" [sortable]="true"></p-column>
+        <p-column field="fecha_verificacion" header="Fecha Verificación" [sortable]="true"></p-column>
+        <p-column field="usuario_aprobacion" header="Usuario Aprobación" [sortable]="true"></p-column>
+        <p-column field="fecha_aprobacion" header="Fecha Aprobación" [sortable]="true"></p-column>
         <p-footer>
             <div class="ui-helper-clearfix" style="width:100%"><button type="button" pButton icon="fa-plus" style="float:left" (click)="showDialogToAdd()" label="Add"></button></div>
         </p-footer>
     </p-dataTable>
 
+    <p-dialog header="Detalle de la solicitud" [(visible)]="displayDialog" [responsive]="true" showEffect="fade" [modal]="true">
+        <div class="ui-grid ui-grid-responsive ui-fluid ui-grid-pad" *ngIf="sol">
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-4"><label for="vin">Gestion</label></div>
+                <div class="ui-grid-col-8"><input pInputText id="gestion" [(ngModel)]="sol.gestion" /></div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-4"><label for="vin">Entidad</label></div>
+                <div class="ui-grid-col-8"><input pInputText id="entidad" [(ngModel)]="sol.id_entidad" /></div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-4"><label for="vin">Direccion admin</label></div>
+                <div class="ui-grid-col-8"><input pInputText id="da" [(ngModel)]="sol.id_da" /></div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-4"><label for="vin">Unidad Ejecutora</label></div>
+                <div class="ui-grid-col-8"><input pInputText id="ue" [(ngModel)]="sol.id_ue" /></div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-4"><label for="vin">N. documento</label></div>
+                <div class="ui-grid-col-8"><input pInputText id="nro" [(ngModel)]="sol.nro_documento" /></div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-4"><label for="vin">Tipo Formulario</label></div>
+                <div class="ui-grid-col-8"><input pInputText id="tipoformulario" [(ngModel)]="sol.tipo_formulario" /></div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-4"><label for="vin">Tipo Operacion</label></div>
+                <div class="ui-grid-col-8"><input pInputText id="tipooperacion" [(ngModel)]="sol.tipo_operacion" /></div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-4"><label for="vin">Fecha Elaboración</label></div>
+                <div class="ui-grid-col-8"><input pInputText id="fechaelaboracion" [(ngModel)]="sol.fecha_elaboracion" /></div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-4"><label for="vin">Fecha Verificación</label></div>
+                <div class="ui-grid-col-8"><input pInputText id="fechaverificacion" [(ngModel)]="sol.fecha_verificacion" /></div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-4"><label for="vin">Usuario Verificacion</label></div>
+                <div class="ui-grid-col-8"><input pInputText id="usuariov" [(ngModel)]="sol.usuario_verificacion" /></div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-4"><label for="vin">Fecha aprobación</label></div>
+                <div class="ui-grid-col-8"><input pInputText id="fechaaprobacion" [(ngModel)]="sol.fecha_aprobacion" /></div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-4"><label for="vin">Usuario aprobación</label></div>
+                <div class="ui-grid-col-8"><input pInputText id="usuarioaprobacion" [(ngModel)]="sol.usuario_aprobacion" /></div>
+            </div>
+
+        </div>
+
+        <p-footer>
+            <div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
+                <button type="button" pButton icon="fa-close" (click)="delete()" label="Delete"></button>
+                <button type="button" pButton icon="fa-check" (click)="save()" label="Save"></button>
+            </div>
+        </p-footer>
+    </p-dialog>
 </div>

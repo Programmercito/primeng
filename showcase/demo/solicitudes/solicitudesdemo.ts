@@ -31,11 +31,14 @@ export class SolicitudesDemo {
 
 
     save() {
-        if (this.newSol)
+        if (this.newSol) {
+            this.sol.id_solicitud = Math.random;
+            this.sol.id_catalogo = 12;
             this.sols.push(this.sol);
-        else
+        }
+        else {
             this.sols[this.findSelectedCarIndex()] = this.sol;
-
+        }
         this.sol = null;
         this.displayDialog = false;
     }
