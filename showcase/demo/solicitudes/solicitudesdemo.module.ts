@@ -6,8 +6,9 @@ import { SolicitudesDemoRoutingModule } from './solicitudesdemo-routing.module';
 import { SolicitudesService } from './solicitudes.service';
 
 import { HttpModule } from '@angular/http';
-import { InputTextModule, DataTableModule, ButtonModule, DialogModule } from 'primeng/primeng';
+import { InputTextModule, DataTableModule, DialogModule } from 'primeng/primeng';
 import {CalendarModule} from '../../../components/calendar/calendar';
+import {ButtonModule} from '../../../components/button/button';
 @NgModule({
 	imports: [
 		CommonModule,
