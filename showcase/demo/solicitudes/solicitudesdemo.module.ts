@@ -7,6 +7,7 @@ import { SolicitudesService } from './solicitudes.service';
 
 import { HttpModule } from '@angular/http';
 import { InputTextModule, DataTableModule, ButtonModule, DialogModule } from 'primeng/primeng';
+import {CalendarModule} from '../../../components/calendar/calendar';
 @NgModule({
 	imports: [
 		CommonModule,
@@ -19,7 +20,7 @@ import { InputTextModule, DataTableModule, ButtonModule, DialogModule } from 'pr
 		InputTextModule,
 		DataTableModule,
 		ButtonModule,
-		DialogModule
+		DialogModule,CalendarModule
 	],
 	bootstrap: [SolicitudesDemo],
 	declarations: [

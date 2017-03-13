@@ -25,7 +25,7 @@
         </p-footer>
     </p-dataTable>
 
-    <p-dialog header="Detalle de la solicitud" [(visible)]="displayDialog" [responsive]="true" showEffect="fade" [modal]="true">
+    <p-dialog header="Detalle de la solicitud" [(visible)]="displayDialog" [responsive]="true" showEffect="fade" [modal]="true"  width="600">
         <div class="ui-grid ui-grid-responsive ui-fluid ui-grid-pad" *ngIf="sol">
             <div class="ui-grid-row">
                 <div class="ui-grid-col-4"><label for="vin">Gestion</label></div>
@@ -57,11 +57,11 @@
             </div>
             <div class="ui-grid-row">
                 <div class="ui-grid-col-4"><label for="vin">Fecha Elaboración</label></div>
-                <div class="ui-grid-col-8"><input pInputText id="fechaelaboracion" [(ngModel)]="sol.fecha_elaboracion" /></div>
+                <div class="ui-grid-col-8"><p-calendar  [(ngModel)]="sol.fecha_elaboracion" [showIcon]="true" ></p-calendar> </div>
             </div>
             <div class="ui-grid-row">
                 <div class="ui-grid-col-4"><label for="vin">Fecha Verificación</label></div>
-                <div class="ui-grid-col-8"><input pInputText id="fechaverificacion" [(ngModel)]="sol.fecha_verificacion" /></div>
+                <div class="ui-grid-col-8"><p-calendar  [(ngModel)]="sol.fecha_verificacion"  [showIcon]="true"></p-calendar>  </div>
             </div>
             <div class="ui-grid-row">
                 <div class="ui-grid-col-4"><label for="vin">Usuario Verificacion</label></div>
@@ -69,7 +69,7 @@
             </div>
             <div class="ui-grid-row">
                 <div class="ui-grid-col-4"><label for="vin">Fecha aprobación</label></div>
-                <div class="ui-grid-col-8"><input pInputText id="fechaaprobacion" [(ngModel)]="sol.fecha_aprobacion" /></div>
+                <div class="ui-grid-col-8"><p-calendar [(ngModel)]="sol.fecha_aprobacion"  [showIcon]="true"></p-calendar>  </div>
             </div>
             <div class="ui-grid-row">
                 <div class="ui-grid-col-4"><label for="vin">Usuario aprobación</label></div>
