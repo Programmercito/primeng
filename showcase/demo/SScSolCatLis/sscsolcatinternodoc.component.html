@@ -1,0 +1,47 @@
+<div class="content-section implementation">
+    <p-panel header="Consulta de Solicitudes" [toggleable]="true" [style]="{'margin-bottom':'20px'}">
+
+        <div class="ui-g">
+            <div class="ui-g-12 ui-md-6 ui-lg-3">
+                Motivo de Solicitud
+                <p>{{solicitud.motivoSolicitud}}</p>
+
+            </div>
+            <div class="ui-g-12 ui-md-6 ui-lg-3">
+                <div class="ui-g">
+                    <div class="ui-g-6">Nro. Documento: </div>
+                    <div class="ui-g-6">{{solicitud.nroDocumento}}</div>
+                    <div class="ui-g-6">Fecha Elaboración:</div>
+                    <div class="ui-g-6">{{solicitud.fechaElaboracion |date }}</div>
+                    <div class="ui-g-6">Estado: </div>
+                    <div class="ui-g-6">{{solicitud.apiEstado}}</div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </p-panel>
+    <div class="ui-widget-header" style="padding:4px 10px;border-bottom: 0 none">
+        <i class="fa fa-search" style="margin:4px 4px 0 0"></i>
+        <input #gb type="text" pInputText size="50" placeholder="Buscar">
+    </div>
+    <p-dataTable [value]="lista" [rows]="10" [paginator]="true" [pageLinks]="3" [responsive]="true"  [rowsPerPageOptions]="[5,10,20]"
+        [globalFilter]="gb" #dt>
+        <p-header>Registro seleccionado</p-header>
+        <p-column  header="Opciones">
+            <ng-template let-car="rowData" pTemplate="body">
+                <button type="button" pButton class="ui-button-info" (click)="seleccion(car)" icon="fa fa-eye"></button>
+
+                <button type="button" pButton class="ui-button-secondary"  (click)="imprimir(car)"   icon="fa fa-print"></button>
+            </ng-template>
+        </p-column>
+        <p-column field="" header="Nivel de Clasificación" [sortable]="true" [filter]="true" filterPlaceholder="buscar"></p-column>
+        <p-column field="codigoItem" header="Código" [sortable]="true" [filter]="true" filterPlaceholder="buscar"></p-column>
+        <p-column field="descItem" header="Descripción" [sortable]="true" [filter]="true" filterPlaceholder="buscar"></p-column>
+        <p-column field="" header="Motivo" [sortable]="true" [filter]="true" filterPlaceholder="buscar"></p-column>
+        <p-column field="apiEstado" header="Estado" [sortable]="true" [filter]="true" filterPlaceholder="buscar"></p-column>
+
+    </p-dataTable>
+
+</div>

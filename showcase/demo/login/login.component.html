@@ -14,10 +14,12 @@
 
     <div class="ui-xl-6  ui-sm-6 ui-md-6 ui-lg-6  ui-g-6 text-center">
         <!--Formulario de Ingreso--> 
-<br/><br/>
+        <br/><br/>
         <h2 class="form-signin-heading">Ingreso al Sistema de Compras v2.0</h2>
         <br />
         <!--<alert></alert>-->
+
+        <p-messages [value]="msgs"></p-messages>
         <form name="loginForm"   
               #f="ngForm" novalidate>
 
@@ -45,7 +47,7 @@
 
 
             <br />
-           
+
         </form>
     </div>
 

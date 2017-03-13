@@ -15,48 +15,24 @@ export class AuthenticationService {
     ) {}
 
     login(usuario: string, clave: string) {
-
-
-
-
-
-        //console.log(this.appConfigGlobal.cBaseUrl + this.appConfigGlobal.cApiRest +this.cBasePath+ '/login');
-        return this.centralService.peticionpost(this.cBasePath+'/login', JSON.stringify({usuario: usuario, clave: clave}));
-
-        //
-        //       return  this.http.post(this.appConfigGlobal.cBaseUrl + this.appConfigGlobal.cApiRest + '/seguridad/login', JSON.stringify({usuario: usuario, clave: clave}), options)
-        ////            .map((res: Response) => res.json());
-        ////        console.log('cuerpo...');
-        ////        console.log(vl_rque);
-        ////        return vl_rque;
-        //                    .map((response: Response) => {
-        //                        console.log(response);
-        //                        console.log('cuerpo...');
-        //                        console.log(response._body);
-        //                        console.log(JSON.stringify(response._body));
-        //        
-        //                        alert('hola');
-        //                        // login successful if there's a jwt token in the response
-        //                        //                let user = response.json();
-        //                        //                if (user && user.token) {
-        //                        //                    // store user details and jwt token in local storage to keep user logged in between page refreshes
-        //                        //                   localStorage.setItem('currentUser', JSON.stringify(user));
-        //                        //                }
-        //                    });
+        console.log(JSON.stringify({usuario: usuario, clave: clave}));
+        //http://192.168.99.170:7098/AppSeguridad-web/api/seguridad/nvlctl/1/2
+        //return this.centralService.peticionpost70(this.cBasePath+'/login', JSON.stringify({usuario: usuario, clave: clave}));
+        return this.centralService.peticionget70(this.cBasePath + '/nvlctl/1/2');
     }
-    login1
-        (username: string, password: string) {
-        return this.http.post('/seguridad/login', JSON.stringify({username: username, password: password}))
-            .map((response: Response) => {
-                console.log(response);
-                // login successful if there's a jwt token in the response
-                //                let user = response.json();
-                //                if (user && user.token) {
-                // store user details and jwt token in local storage to keep user logged in between page refreshes
-                localStorage.setItem('currentUser', JSON.stringify(username));
-                //                }
-            });
-    }
+    //    login1
+    //        (username: string, password: string) {
+    //        return this.http.post('/seguridad/login', JSON.stringify({username: username, password: password}))
+    //            .map((response: Response) => {
+    //                console.log(response);
+    //                // login successful if there's a jwt token in the response
+    //                //                let user = response.json();
+    //                //                if (user && user.token) {
+    //                // store user details and jwt token in local storage to keep user logged in between page refreshes
+    //                localStorage.setItem('currentUser', JSON.stringify(username));
+    //                //                }
+    //            });
+    //    }
     logout() {
         // remove user from local storage to log user out
         localStorage.removeItem('currentUser');

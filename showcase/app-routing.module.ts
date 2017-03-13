@@ -523,6 +523,13 @@ import { HomePageComponent } from './homepage.component';
             resolve(require('./demo/login/login.component.module')['LoginComponentModule']);
           });
         })
+      },
+      {
+        path: 'sscsolcatlis', loadChildren: () => new Promise(function (resolve) {
+          (require as any).ensure([], function (require: any) {
+            resolve(require('./demo/SScSolCatLis/sscsolcatlis.component.module')['SScSolCatLisComponentModule']);
+          });
+        })
       }
     ])
   ],
