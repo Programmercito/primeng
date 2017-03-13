@@ -12,7 +12,7 @@ export class AppConfigGlobal {
     readonly cApiRest70: string = '/api';
     readonly cHost70: string = 'http://localhost:7098';
       
-    readonly cBaseUrlCompras: string = 'http://127.0.0.1:7098/Compras-web';
+    readonly cBaseUrlCompras: string = 'http://192.168.99.170:7098/Compras-web';
     readonly cApiRespCompras: string = '/api';
     
    
