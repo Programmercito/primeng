@@ -2,7 +2,7 @@
     <div id="layout-sidebar" [ngClass]="{'active':mobileMenuActive}">
         <span class="layout-logo">
             <a href="#" class="sidebar-logo" [routerLink]="['/']">
-                <img alt="logo" src="showcase/resources/images/logo.png" />
+               <img alt="logo" src="showcase/resources/images/logo.png" />
             </a>
             <a href="#" id="menu-button-mobile" (click)="toggleMenu($event)" [ngClass]="{'active':mobileMenuActive}">
                 <img alt="logo" src="showcase/resources/images/menuicon.svg"/>
@@ -11,17 +11,18 @@
 
 
         <a id="menu_sigep" #sigepmenutitle [class.active-menuitem]="sigepmenutitle.id == activeMenuId" (click)="activeMenuId = sigepmenutitle.id">
-            <img src="showcase/resources/images/mono/input.svg" />
+           <img src="showcase/resources/images/mono/input.svg" />
             <span>Sigep</span>
         </a>
         <div [ngClass]="{submenushow: (sigepmenutitle.id == activeMenuId), 'submenuhide': (sigepmenutitle.id != activeMenuId)}">
             <a [routerLink]="['/login']" (click)="mobileMenuActive = false">&#9679; Login</a>
             <a [routerLink]="['/solicitudes']" (click)="mobileMenuActive = false">&#9679; Solicitudes</a>
+            <a [routerLink]="['/sscsolcatlis']" (click)="mobileMenuActive = false">&#9679;Consulta de Solicitudes</a>
         </div>
 
 
         <a id="menu_input" #inputmenutitle [class.active-menuitem]="inputmenutitle.id == activeMenuId" (click)="activeMenuId = inputmenutitle.id">
-            <img src="showcase/resources/images/mono/input.svg" />
+           <img src="showcase/resources/images/mono/input.svg" />
             <span>Input</span>
         </a>
         <div [ngClass]="{submenushow: (inputmenutitle.id == activeMenuId), 'submenuhide': (inputmenutitle.id != activeMenuId)}">
@@ -48,7 +49,7 @@
         </div>
 
         <a id="button_menutitle" #buttonmenutitle [class.active-menuitem]="buttonmenutitle.id == activeMenuId" (click)="activeMenuId = buttonmenutitle.id">
-            <img src="showcase/resources/images/mono/button.svg" />
+           <img src="showcase/resources/images/mono/button.svg" />
             <span>Button</span>
         </a>
         <div [ngClass]="{'submenushow': (buttonmenutitle.id == activeMenuId), 'submenuhide': (buttonmenutitle.id != activeMenuId)}">
@@ -57,7 +58,7 @@
         </div>
 
         <a id="data_menutitle" #datamenutitle [class.active-menuitem]="datamenutitle.id == activeMenuId" (click)="activeMenuId = datamenutitle.id">
-            <img src="showcase/resources/images/mono/data.svg" />
+           <img src="showcase/resources/images/mono/data.svg" />
             <span>Data</span>
         </a>
         <div [ngClass]="{'submenushow': (datamenutitle.id == activeMenuId), 'submenuhide': (datamenutitle.id != activeMenuId)}">
@@ -76,7 +77,7 @@
         </div>
 
         <a id="menu_panel" #panelmenutitle [class.active-menuitem]="panelmenutitle.id == activeMenuId" (click)="activeMenuId = panelmenutitle.id">
-            <img src="showcase/resources/images/mono/panel.svg" />
+           <img src="showcase/resources/images/mono/panel.svg" />
             <span>Panel</span>
         </a>
         <div [ngClass]="{'submenushow': (panelmenutitle.id == activeMenuId), 'submenuhide': (panelmenutitle.id != activeMenuId)}">
@@ -89,7 +90,7 @@
         </div>
 
         <a id="menu_overlay" #overlaymenutitle [class.active-menuitem]="overlaymenutitle.id == activeMenuId" (click)="activeMenuId = overlaymenutitle.id">
-            <img src="showcase/resources/images/mono/overlay.svg" />
+           <img src="showcase/resources/images/mono/overlay.svg" />
             <span>Overlay</span>
         </a>
         <div [ngClass]="{'submenushow': (overlaymenutitle.id == activeMenuId), 'submenuhide': (overlaymenutitle.id != activeMenuId)}">
@@ -99,9 +100,9 @@
             <a [routerLink]="['/overlaypanel']" (click)="mobileMenuActive = false">&#9679; OverlayPanel</a>
             <a [routerLink]="['/tooltip']" (click)="mobileMenuActive = false">&#9679; Tooltip</a>
         </div>
-        
+
         <a id="menu_file" #filemenutitle [class.active-menuitem]="filemenutitle.id == activeMenuId" (click)="activeMenuId = filemenutitle.id">
-            <img src="showcase/resources/images/mono/file.svg" />
+           <img src="showcase/resources/images/mono/file.svg" />
             <span>File</span>
         </a>
         <div [ngClass]="{'submenushow': (filemenutitle.id == activeMenuId), 'submenuhide': (filemenutitle.id != activeMenuId)}">
@@ -109,7 +110,7 @@
         </div>
 
         <a id="menu_menu" #menumenutitle [class.active-menuitem]="menumenutitle.id == activeMenuId" (click)="activeMenuId = menumenutitle.id">
-            <img src="showcase/resources/images/mono/menu.svg" />
+           <img src="showcase/resources/images/mono/menu.svg" />
             <span>Menu</span>
         </a>
         <div [ngClass]="{'submenushow': (menumenutitle.id == activeMenuId), 'submenuhide': (menumenutitle.id != activeMenuId)}">
@@ -127,7 +128,7 @@
         </div>
 
         <a id="menu_chart" #chartmenutitle [class.active-menuitem]="chartmenutitle.id == activeMenuId" (click)="activeMenuId = chartmenutitle.id">
-            <img src="showcase/resources/images/mono/charts.svg" />
+           <img src="showcase/resources/images/mono/charts.svg" />
             <span>Charts</span>
         </a>
         <div [ngClass]="{'submenushow': (chartmenutitle.id == activeMenuId), 'submenuhide': (chartmenutitle.id != activeMenuId)}">
@@ -141,7 +142,7 @@
         </div>
 
         <a id="menu_messages" #messagesmenutitle [class.active-menuitem]="messagesmenutitle.id == activeMenuId" (click)="activeMenuId = messagesmenutitle.id">
-            <img src="showcase/resources/images/mono/message.svg">
+           <img src="showcase/resources/images/mono/message.svg">
             <span>Messages</span>
         </a>
         <div [ngClass]="{'submenushow': (messagesmenutitle.id == activeMenuId), 'submenuhide': (messagesmenutitle.id != activeMenuId)}">
@@ -150,27 +151,27 @@
         </div>
 
         <a id="menu_multimedia" #multimediamenutitle [class.active-menuitem]="multimediamenutitle.id == activeMenuId"
-                (click)="activeMenuId = multimediamenutitle.id">
-                <img src="showcase/resources/images/mono/multimedia.svg">
-                <span>Multimedia</span>
+           (click)="activeMenuId = multimediamenutitle.id">
+           <img src="showcase/resources/images/mono/multimedia.svg">
+            <span>Multimedia</span>
         </a>
         <div [ngClass]="{'submenushow': (multimediamenutitle.id == activeMenuId), 'submenuhide': (multimediamenutitle.id != activeMenuId)}">
             <a [routerLink]="['/galleria']" (click)="mobileMenuActive = false">&#9679; Galleria</a>
         </div>
-        
+
         <a id="menu_dnd" #dndmenutitle [class.active-menuitem]="dndmenutitle.id == activeMenuId"
-                (click)="activeMenuId = dndmenutitle.id">
-                <img src="showcase/resources/images/mono/dragdrop.svg">
-                <span>DragDrop</span>
+           (click)="activeMenuId = dndmenutitle.id">
+           <img src="showcase/resources/images/mono/dragdrop.svg">
+            <span>DragDrop</span>
         </a>
         <div [ngClass]="{'submenushow': (dndmenutitle.id == activeMenuId), 'submenuhide': (dndmenutitle.id != activeMenuId)}">
             <a [routerLink]="['/dragdrop']" (click)="mobileMenuActive = false">&#9679; Drag&amp;Drop</a>
         </div>
-        
+
         <a id="menu_misc" #misctitle [class.active-menuitem]="misctitle.id == activeMenuId"
-                (click)="activeMenuId = misctitle.id">
-                <img src="showcase/resources/images/mono/misc.svg">
-                <span>Misc</span>
+           (click)="activeMenuId = misctitle.id">
+           <img src="showcase/resources/images/mono/misc.svg">
+            <span>Misc</span>
         </a>
         <div [ngClass]="{'submenushow': (misctitle.id == activeMenuId), 'submenuhide': (misctitle.id != activeMenuId)}">
             <a [routerLink]="['/responsive']" (click)="mobileMenuActive = false">&#9679; Responsive</a>
@@ -197,7 +198,7 @@
             </a>
 
             <span class="topbar-link" id="themeSwitcher" (mouseenter)="themesVisible = true" (mouseleave)="themesVisible = false">
-                <img src="showcase/resources/images/themeswitcher.svg" />
+                  <img src="showcase/resources/images/themeswitcher.svg" />
                 <span>Themes</span>
                 <div id="GlobalThemeSwitcher" [style.display]="themesVisible ? 'block' : 'none'" style="margin-top:10px">
                     <span>Premium Templates</span>
@@ -223,9 +224,9 @@
                     <a href="#" data-theme="voclain" onclick="DemoApp.changeTheme(event, this)"><span class="ui-text">Voclain</span></a>
                 </div>
             </span>
-            
+
             <a href="setup.html" class="topbar-link" [routerLink]="['/setup']">
-                <img alt="mockosx" src="showcase/resources/images/setup.svg" />
+               <img alt="mockosx" src="showcase/resources/images/setup.svg" />
                 <span>Setup</span>
             </a>
 
