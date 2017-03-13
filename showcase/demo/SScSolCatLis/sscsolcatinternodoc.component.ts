@@ -1,21 +1,22 @@
-import {Component, OnInit} from '@angular/core';
-import {Validators, FormControl, FormGroup, FormBuilder} from '@angular/forms';
-import {Router, ActivatedRoute} from '@angular/router';
-import {NgForm} from '@angular/forms';
-import {BrowserModule} from '@angular/platform-browser';
-import {SscSolCatModel, SscSolCatObjModel, ListaEstadosModel, ListaOperacionModel, SolicitudModel, ItemSolicitudModel} from '../common/models/index';
+import { Component, OnInit } from '@angular/core';
+import { Validators, FormControl, FormGroup, FormBuilder } from '@angular/forms';
+import { Router, ActivatedRoute } from '@angular/router';
+import { NgForm } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import { SscSolCatModel, SscSolCatObjModel, ListaEstadosModel, ListaOperacionModel, SolicitudModel, ItemSolicitudModel } from '../common/models/index';
 //libreriaS PrimeNG
-import {InputTextModule} from 'primeng/primeng';
-import {InputTextareaModule} from 'primeng/primeng';
-import {PasswordModule} from 'primeng/primeng';
-import {ButtonModule} from 'primeng/primeng';
-import {MessagesModule} from 'primeng/primeng';
+import { InputTextModule } from 'primeng/primeng';
+import { InputTextareaModule } from 'primeng/primeng';
+import { PasswordModule } from 'primeng/primeng';
+import { ButtonModule } from 'primeng/primeng';
+import { MessagesModule } from 'primeng/primeng';
 
-import {PanelModule} from 'primeng/primeng';
+import { PanelModule } from 'primeng/primeng';
 //libreriaS PrimeNG Comunes
-import {Message} from '../../../components/common/api';
+import { Message } from '../../../components/common/api';
+import {ResponseInterface} from './response';
 //servicios
-import {AlertPrimeNg, SScSolCatLisService, ReporteService,ScCatDocTLisService} from '../common/services/index';
+import { AlertPrimeNg, SScSolCatLisService, ReporteService, ScCatDocTLisService } from '../common/services/index';
 
 
 
@@ -27,9 +28,9 @@ import {AlertPrimeNg, SScSolCatLisService, ReporteService,ScCatDocTLisService} f
 export class SScSolCatInternoDocComponent implements OnInit {
     vl_enlace = "";
     lista: ItemSolicitudModel[];
-    idSolicitud?:number;
-    solicitud = new SolicitudModel('','','','','',null,'','','');
-    tipoOperacion?:string;
+    idSolicitud?: number;
+    solicitud = new SolicitudModel('', '', '', '', '', null, '', '', '');
+    tipoOperacion?: string;
     constructor(
         private route: ActivatedRoute,
         private router: Router,
@@ -38,7 +39,7 @@ export class SScSolCatInternoDocComponent implements OnInit {
         private servicesscsolcatlist: SScSolCatLisService,
         private servicesscsolcatlis: ScCatDocTLisService,
         private reporteService: ReporteService,
-        
+
         //config: NgbTabsetConfig
     ) {
 
@@ -80,14 +81,16 @@ export class SScSolCatInternoDocComponent implements OnInit {
 
     }
     cargainicial() {
- 
+
         console.log("Ingreso Metodo");
-        this.vl_enlace = "/BuscarSolicitudDet/" + this.idSolicitud ;//+ "/"+this.tipoOperacion;
+        this.vl_enlace = "/BuscarSolicitudDet/" + this.idSolicitud;//+ "/"+this.tipoOperacion;
         this.servicesscsolcatlis.buscarSolicitudes(this.vl_enlace)
             .map(response => {
-                console.log("Entro a responsive")
-                this.solicitud = <SolicitudModel> response.solicitud;
-                this.lista = <ItemSolicitudModel> response.listaItems;
+                console.log("Entro a responso")
+                let resp: ResponseInterface;
+                resp = response;
+                this.solicitud = <SolicitudModel>resp.solicitud;
+                this.lista = <ItemSolicitudModel[]>resp.listaItems;
                 console.log(this.solicitud);
                 console.log(this.lista);
                 console.log("Fin responsive");
